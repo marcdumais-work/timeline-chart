@@ -1,6 +1,8 @@
 {
   "name": "timeline-chart",
   "version": "0.2.0",
+  "description": "A time graph / gantt chart library for large data (e.g. traces)",
+  "keywords": ["time-graph","gantt", "visualization"],
   "license": "MIT",
   "scripts": {
     "build": "tsc",
@@ -27,5 +29,12 @@
     "jest": "^27.4.3",
     "jest-canvas-mock": "^2.3.1",
     "ts-jest": "^29.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eclipse-cdt-cloud/timeline-chart"
+  },
+  "bugs": {
+    "url": "https://github.com/eclipse-cdt-cloud/timeline-chart/issues"
   }
 }
