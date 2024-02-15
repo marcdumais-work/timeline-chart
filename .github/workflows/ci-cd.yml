@@ -13,6 +13,26 @@ on:
       - published
 
 jobs:
+
+  test:
+    # if: contains(github.event.head_commit.message, '[latest]:')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Debug commit message
+        shell: bash
+        run: |
+          echo "Workflow trigger event name: ${{ github.event_name }}"
+          echo "Workflow trigger reference: ${{ github.ref }}"
+          echo "Commit message (push): ${{ github.event.head_commit.message }}"
+          
+
+      - name: quick test
+        if: contains(github.event.head_commit.message, '[latest]:')
+        shell: bash
+        run: |
+          echo "It worked!"
+
+
   build:
     runs-on: ${{ matrix.os }}
 
